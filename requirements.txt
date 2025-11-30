@@ -1,5 +1,5 @@
 fastapi
 uvicorn[standard]
 qdrant-client
-datapizza
+datapizza-ai
 python-dotenv
