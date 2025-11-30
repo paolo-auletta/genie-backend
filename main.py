@@ -1,5 +1,6 @@
 import json
 import uuid
+import os
 from datetime import datetime, timezone
 from datapizza.clients.openai import OpenAIClient
 from qdrant_client import QdrantClient
@@ -23,7 +24,7 @@ QDRANT_COLLECTION_NAME = "Hackaton"
 ENABLE_TEXT_BM25 = True
 
 # Initialize the client with your API key
-api_key = "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"
+api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise RuntimeError("OPENAI_API_KEY environment variable is not set.")
 
